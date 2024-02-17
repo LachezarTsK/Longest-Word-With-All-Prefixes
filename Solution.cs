@@ -17,7 +17,7 @@ public class Solution
     {
         foreach (string word in words)
         {
-            trie.addWord(word);
+            trie.AddWord(word);
         }
     }
 
@@ -28,7 +28,7 @@ public class Solution
 
         foreach (string word in words)
         {
-            if (trie.eachLetterInWordEndsPrefix(word))
+            if (trie.EachLetterInWordEndsPrefix(word))
             {
                 if (word.Length > maxLength)
                 {
@@ -56,7 +56,7 @@ class Trie
         public bool endsPrefix;
     }
 
-    public void addWord(String word)
+    public void AddWord(String word)
     {
         Node current = root;
         for (int i = 0; i < word.Length; ++i)
@@ -71,7 +71,7 @@ class Trie
         current.endsPrefix = true;
     }
 
-    public bool eachLetterInWordEndsPrefix(String word)
+    public bool EachLetterInWordEndsPrefix(String word)
     {
         Node current = root;
         for (int i = 0; i < word.Length; ++i)
